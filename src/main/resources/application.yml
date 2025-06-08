@@ -1,0 +1,26 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /api/v2
+
+spring:
+  application:
+    name: Project Management Tool
+  datasource:
+    url: jdbc:h2:mem:project-management-tool
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+  h2:
+    console:
+      enabled: true
+
+service:
+  email:
+    enabled: true
+    core-pool-size: 10
+    max-pool-size: 100
+    queue-capacity: 1000
